@@ -1,0 +1,14 @@
+<div class="class">
+  <h2>Animais:</h2>
+  <ul>
+    @for (animal of animals; track animal) {
+    <li>
+      Nome: {{ animal.name }} - tipo: {{ animal.type }}
+      <button (click)="showAge(animal)">Show age</button>
+    </li>
+    } @empty {
+    <li>Nem um animal cadastrado</li>
+    }
+  </ul>
+  <h3>{{ animalDetails }}</h3>
+</div>
